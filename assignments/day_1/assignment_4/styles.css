@@ -1,0 +1,67 @@
+body {
+  /* Reset margins */
+  margin: 0;
+
+  /* Set background color */
+  background-color: #E4DCD3;
+
+  /* Set minimum height */
+  min-height: 100vh;
+
+  /* Grid layout */
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-rows: min-content 1fr min-content;
+}
+
+header {
+  /* Place element in "header" area */
+  grid-area: header;
+
+  /* Set background color */
+  background-color: #092b13;
+
+  /* Set font color */
+  color: #ffffff;
+
+  /* Set font size */
+  font-size: 2rem;
+
+  /* Set padding top and bottom */
+  padding-block: 0.5rem;
+
+  /* Flex layout */
+  display: flex;
+  justify-content: center;
+}
+
+header > p {
+  /* Reset margins */
+  margin: 0;
+}
+
+main {
+  /* Place element in "main" area */
+  grid-area: main;
+}
+
+footer {
+  /* Place element in "footer" area */
+  grid-area: footer;
+
+  /* Set font size */
+  font-size: 0.75rem;
+
+  /* Set background color */
+  background-color: #092b13;
+
+  /* Set font size */
+  color: #ffffff;
+
+  /* Flex layout */
+  display: flex;
+  justify-content: center;
+}
