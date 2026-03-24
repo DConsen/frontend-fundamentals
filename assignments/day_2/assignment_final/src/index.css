@@ -1,0 +1,124 @@
+body {
+  /* Set background color */
+  background-color: #e4dcd3;
+}
+
+#root {
+  /* Set minimum height */
+  min-height: 100dvh;
+
+  /* Grid layout */
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-rows: min-content 1fr min-content;
+}
+
+header {
+  /* Place element in "header" area */
+  grid-area: header;
+
+  /* Set background color */
+  background-color: #092b13;
+
+  /* Set font color */
+  color: #ffffff;
+
+  /* Set font size */
+  font-size: 2rem;
+
+  /* Set padding top and bottom */
+  padding-block: 0.5rem;
+
+  /* Flex layout */
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  /* Place element in "main" area */
+  grid-area: main;
+
+  /* Set padding top and bottom */
+  padding-block: 2rem;
+
+  /* Flex layout */
+  display: flex;
+  justify-content: center;
+
+  /* Set padding for small screens */
+  @media (width < 40rem) {
+    padding: 1rem;
+  }
+}
+
+article {
+  /* Maximize width to improve readability */
+  max-width: 70ch;
+}
+
+footer {
+  /* Place element in "footer" area */
+  grid-area: footer;
+
+  /* Set font size */
+  font-size: 0.75rem;
+
+  /* Set background color */
+  background-color: #092b13;
+
+  /* Set font size */
+  color: #ffffff;
+
+  /* Flex layout */
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  /* Minimal width */
+  min-width: 32rem;
+
+  /* Flex layout */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+label {
+  font-weight: bold;
+
+  /* Flex layout */
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+fieldset {
+  border-color: #782410;
+  width: 100%;
+
+  /* Flex layout */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+button[type='submit'] {
+  /* Set background color */
+  background-color: #782410;
+
+  /* Set font color */
+  color: #ffffff;
+}
+
+label:has(span) > input {
+  /* Set border */
+  border: #ff0000 1px solid;
+}
+
+legend {
+  font-size: 1.5rem;
+}
